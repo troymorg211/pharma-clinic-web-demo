@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://astercare.example/sitemap.xml
+# Set the absolute public sitemap URL when a production domain is attached.
+Sitemap: /sitemap.xml

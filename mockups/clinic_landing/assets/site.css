@@ -1,6 +1,7 @@
 :root{--paper:#f2f7f7;--white:#fff;--ink:#102d38;--teal:#075b5b;--mist:#d8e9e8;--line:#bdd3d2;--muted:#47666b;--sand:#d58b3c}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
+body.modal-open{overflow:hidden}
 body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 Manrope,system-ui,sans-serif}
 body:before{content:"";position:fixed;inset:0;z-index:-1;opacity:.12;pointer-events:none;background-image:radial-gradient(#17454b .55px,transparent .6px);background-size:8px 8px}
 
@@ -8,8 +9,8 @@ body:before{content:"";position:fixed;inset:0;z-index:-1;opacity:.12;pointer-eve
 .scroll-progress{position:fixed;top:0;left:0;height:3px;background:var(--teal);z-index:100;transition:width .1s linear;width:0%}
 
 /* Scroll reveal animations */
-.reveal{opacity:0;transform:translateY(30px);transition:opacity .6s ease-out,transform .6s ease-out}
-.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal{opacity:1;transform:none;transition:transform .35s ease-out}
+.reveal.visible{opacity:1;transform:none}
 
 a{color:inherit;text-decoration:none}
 button,input,select,textarea{font:inherit}
@@ -247,9 +248,9 @@ dialog::backdrop{background:#08272d99}
 .close{border:0;background:none;color:var(--ink);font-size:1.4rem;cursor:pointer;transition:transform .2s}
 .close:hover{transform:scale(1.1)}
 .booknote{font-size:.7rem;color:var(--muted);margin:15px 0}
-.progress{display:flex;gap:5px;margin:23px 0}
-.progress span{height:4px;flex:1;background:#cbdedd;border-radius:2px;transition:background .3s}
-.progress span.on{background:var(--teal)}
+.progress{display:flex;gap:5px;margin:23px 0;padding:0;list-style:none}
+.progress li{height:4px;flex:1;background:#cbdedd;font-size:0;transition:background .3s}
+.progress li.on{background:var(--teal)}
 
 /* Step transition animations for modal */
 @keyframes fadeSlideIn{from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:translateX(0)}}
@@ -261,6 +262,8 @@ dialog::backdrop{background:#08272d99}
 .choice:hover{border-color:var(--teal)}
 .choice small{display:block;font-weight:400;color:var(--muted);margin-top:4px}
 .choice.selected{border:2px solid var(--teal);color:var(--teal);background:#edf7f6}
+.choice[aria-pressed="true"]{border:2px solid var(--teal);color:var(--teal);background:#edf7f6}
+.field-error{min-height:1.1em;margin:3px 0 0;color:#9a3e18;font-size:.7rem;font-weight:600}
 
 .modalactions{display:flex;justify-content:space-between;align-items:center;margin-top:25px}
 .modalactions .btn:disabled{opacity:.45;cursor:not-allowed}

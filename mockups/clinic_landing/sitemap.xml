@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://astercare.example/</loc></url>
-  <url><loc>https://astercare.example/about.html</loc></url>
-  <url><loc>https://astercare.example/services.html</loc></url>
-  <url><loc>https://astercare.example/resources.html</loc></url>
-  <url><loc>https://astercare.example/contact.html</loc></url>
+  <!-- Replace these relative demo routes with absolute production URLs at deployment. -->
+  <url><loc>/</loc></url>
+  <url><loc>/about.html</loc></url>
+  <url><loc>/services.html</loc></url>
+  <url><loc>/resources.html</loc></url>
+  <url><loc>/contact.html</loc></url>
+  <url><loc>/privacy.html</loc></url>
+  <url><loc>/accessibility.html</loc></url>
 </urlset>
