@@ -12,3 +12,7 @@ No build step: the deployable site lives in `mockups/clinic_landing/` (Vercel an
 - Urgent-help dialog (999 / NHS 111), contact form and newsletter validation
 
 All names, prices, addresses (Ofcom drama-range phone number, `.example` email) and patient stories are illustrative.
+
+**Sharing:** pages carry Open Graph / Twitter card tags with a purpose-made 1200×630 preview (`assets/og.jpg`) and an Apple touch icon.
+
+**Photography:** clinician portraits and interior/guide photos in `assets/img/` are from [Unsplash](https://unsplash.com) under the Unsplash License, cropped for the site. They are stock photos of models, not real clinicians — the people pictured have no connection to this fictional practice.
