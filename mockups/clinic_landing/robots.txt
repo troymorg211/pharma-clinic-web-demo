@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Set the absolute public sitemap URL when a production domain is attached.
-Sitemap: /sitemap.xml
+Sitemap: https://pharma-clinic-web-demo.vercel.app/sitemap.xml
